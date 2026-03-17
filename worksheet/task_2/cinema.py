@@ -29,7 +29,7 @@ def customer_tickets(conn, customer_id):
     ORDER BY f.title ASC;
     """
     
-    cursor = conn.execute(query, (customer_id))
+    cursor = conn.execute(query, (customer_id,))
     return cursor.fetchall()
 
 
@@ -77,5 +77,5 @@ def top_customers_by_spend(conn, limit):
     LIMIT ?;
     """
 
-    cursor = conn.execute(query, (limit))
+    cursor = conn.execute(query, (limit,))
     return cursor.fetchall()
