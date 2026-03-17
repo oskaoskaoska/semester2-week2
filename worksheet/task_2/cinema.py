@@ -77,5 +77,5 @@ def top_customers_by_spend(conn, limit):
     LIMIT ?;
     """
 
-    cursor = conn.execute(query, (limit,))
+    cursor = conn.execute(query, (limit))
     return cursor.fetchall()
