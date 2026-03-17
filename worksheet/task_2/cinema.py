@@ -29,7 +29,7 @@ def customer_tickets(conn, customer_id):
     ORDER BY f.title ASC;
     """
     
-    cursor = conn.exectue(query, (customer_id))
+    cursor = conn.execute(query, (customer_id))
     return cursor.fetchall()
 
 
